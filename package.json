@@ -1,0 +1,36 @@
+{
+  "name": "@coldtill/dashcommerce",
+  "version": "0.1.0",
+  "description": "Coldtill crypto payments for DashCommerce on EmDash: USDT, USDC, BTC, ETH, SOL and 200+ coins, paid straight to your own wallets.",
+  "license": "MIT",
+  "type": "module",
+  "author": "Coldtill (https://coldtill.com)",
+  "homepage": "https://coldtill.com/integrations/",
+  "repository": { "type": "git", "url": "git+https://github.com/Coldtill/dashcommerce-crypto-payment-gateway.git" },
+  "bugs": { "url": "https://github.com/Coldtill/dashcommerce-crypto-payment-gateway/issues" },
+  "keywords": ["dashcommerce", "emdash", "crypto", "payments", "payment-provider", "usdt", "usdc", "bitcoin", "self-hosted"],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" },
+    "./entry": { "types": "./dist/entry.d.ts", "import": "./dist/entry.js" },
+    "./provider": { "types": "./dist/provider.d.ts", "import": "./dist/provider.js" }
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run build && node --test test/*.test.js",
+    "prepublishOnly": "npm test"
+  },
+  "peerDependencies": {
+    "@dashcommerce/core": ">=0.3.0 <0.4.0",
+    "emdash": ">=1.1.0 <1.4.0"
+  },
+  "devDependencies": {
+    "@dashcommerce/core": "0.3.2",
+    "emdash": "1.3.1",
+    "typescript": "^5.9.0"
+  }
+}
