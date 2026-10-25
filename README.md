@@ -8,7 +8,7 @@ the commerce plugin for [EmDash](https://emdashcms.com). Coldtill is a
 [self-hosted crypto payment gateway](https://github.com/Coldtill/self-hosted-crypto-payment-gateway) that runs on
 your own server.
 
-[Download](https://github.com/Coldtill/dashcommerce-crypto-payment-gateway/releases/latest/download/coldtill-dashcommerce.tgz) ·
+[npm](https://www.npmjs.com/package/@coldtill/dashcommerce) ·
 [Coldtill](https://coldtill.com) · [Docs](https://coldtill.com/docs/) · [Live demo dashboard](https://demo.coldtill.com/) ·
 [Other integrations](https://coldtill.com/integrations/)
 
@@ -41,7 +41,7 @@ curl -fsSL https://coldtill.com/install.sh | sudo bash -s -- --edition free
 1. Add the package to your EmDash site:
 
    ```bash
-   npm install https://github.com/Coldtill/dashcommerce-crypto-payment-gateway/releases/latest/download/coldtill-dashcommerce.tgz
+   npm install @coldtill/dashcommerce
    ```
 
 2. In `astro.config.mjs`, replace `dashcommerce()` with `dashcommerceWithColdtill()` and pass your Coldtill URL:
